@@ -1,0 +1,37 @@
+@use "global/variables.scss" as *;
+
+body {
+  min-width: 320px;
+  margin: 0 auto;
+  min-height: 100%;
+  font-family: $font-ptsans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-basic-black;
+  background-color: $color-basic-white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
