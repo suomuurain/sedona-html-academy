@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/ptsans-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsans-700.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-700.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/favicons/apple.png"> <!-- 152×152 -->
+    <link rel="manifest" href="manifest.webmanifest">
+  </head>
+  <body class="page__body">
+    <header class="main-header container">
+      <div class="main-header__wrapper">
+        <a href="index.html" class="main-header__logo">
+          <picture>
+            <img src="" alt="Логотип Седоны" class="main-header__logo-icon">
+          </picture>
+        </a>
+        <button class="main-header__toggle main-header__toggle--close main-header__toggle--nojs">
+          <span class="visually-hidden" type="button">Открыть меню.</span>
+        </button>
+      </div>
+      <nav class="main-header__main-nav main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="index.html" class="main-nav__link">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="catalog.html" class="main-nav__link">ФОТО И ВИДЕО</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="form.html" class="main-nav__link main-nav__link--current">Форма отзыва</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">HTML ACADEMY</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main>
+      <section class="intro">
+        <h1 class="visually-hidden">Городок Седона.</h1>
+        <div class="intro__wrapper">
+          <picture>
+            <img src="" alt="Добро пожаловать в Седону" class="intro__image">
+          </picture>
+        </div>
+      </section>
+      <section class="form">
+        <div>
+          <h2 class="form__title">Оставьте свой отзыв</h2>
+          <p class="form__description">
+            Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+          </p>
+        </div>
+        <div>
+          <form action="">
+            <div>
+              <div>
+                <fieldset>
+                  <h3>Представьтесь:</h3>
+                  <p>
+                    <label for="">ИМЯ*:</label>
+                    <input type="text">
+                  </p>
+                  <p>
+                    <label for="">ФАМИЛИЯ*:</label>
+                    <input type="text">
+                  </p>
+                  <p>
+                    <label for="">Отчество:</label>
+                    <input type="text">
+                  </p>
+                </fieldset>
+
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+
+      </section>
+
+
+    </main>
+
+
+    <footer class="main-footer container">
+      <div class="main-footer__wrapper">
+        <div class="main-footer__wrapper">
+          <h2 class="visually-hidden">Ставьте хэш-тег #visitSEDONA</h2>
+          <p class="main-footer__title">
+            #visitSEDONA
+          </p>
+        </div>
+
+        <section class="main-footer__social social">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="" class="social__link social__link--vk">
+                <span class="visually-hidden">Vkontakte</span>
+                <svg class="social__link-icon">
+
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link social__link--telegram">
+                <span class="visually-hidden">Telegram</span>
+                <svg class="social__link-icon">
+
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link social__link--youtube">
+                <span class="visually-hidden">YouTube</span>
+                <svg class="social__link-icon">
+
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="main-footer__html-academy html-academy">
+          <h2 class="visually-hidden">Разработано в HTML Academy</h2>
+          <a href="" class="html-academy__link">
+            <span class="html-academy__description">Разработано</span>
+            <svg class="html-academy__icon">
+
+            </svg>
+          </a>
+        </section>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
