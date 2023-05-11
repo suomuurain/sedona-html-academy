@@ -55,42 +55,141 @@
         </div>
       </section>
       <section class="form">
-        <div>
+        <div class="form__wrapper-heading">
           <h2 class="form__title">Оставьте свой отзыв</h2>
           <p class="form__description">
             Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
           </p>
         </div>
-        <div>
-          <form action="">
-            <div>
-              <div>
-                <fieldset>
-                  <h3>Представьтесь:</h3>
-                  <p>
-                    <label for="">ИМЯ*:</label>
-                    <input type="text">
-                  </p>
-                  <p>
-                    <label for="">ФАМИЛИЯ*:</label>
-                    <input type="text">
-                  </p>
-                  <p>
-                    <label for="">Отчество:</label>
-                    <input type="text">
-                  </p>
-                </fieldset>
+        <div class="form__wrapper">
+          <form class="form__application" action="https://echo.htmlacademy.ru/" method="get">
+            <div class="form__wrapper-username username">
+              <fieldset class="username__fieldset">
+                <div class="username__inner-wrapper">
+                  <h3 class="username__subtitle">Представьтесь:</h3>
+                </div>
+                <p class="username__group">
+                  <label class="username__text" for="user-name-field">ИМЯ*:</label>
+                  <input class="username__field" type="text" name="user-name" id="user-name-field" placeholder="Имя" required>
+                </p>
+                <p class="username__group">
+                  <label class="username__text" for="user-surname-field">ФАМИЛИЯ*:</label>
+                  <input class="username__field" type="text" name="surname" id="user-surname-field" placeholder="Фамилия" required>
+                </p>
+                <p class="username__group">
+                  <label class="username__text" for="user-patronymic-field">Отчество:</label>
+                  <input class="username__field" type="text" name="patronymic" id="user-patronymic-field" placeholder="Отчество" required>
+                </p>
+              </fieldset>
+            </div>
+            <div class="form__wrapper-contacts contacts">
+              <fieldset class="contacts__fieldset">
+                <div class="contacts__inner-wrapper">
+                  <h3 class="contacts__subtitle">Контактная информация:</h3>
+                </div>
+                <p class="contacts__group">
+                  <label class="contacts__text" for="user-phone-field">Контактный телефон*:</label>
+                  <input class="contacts__field contacts__field--phone" type="text" name="user-phone" id="user-phone-field" placeholder="Введите телефон" required>
+                </p>
+                <p class="contacts__group">
+                  <label class="contacts__text" for="user-phone-email">Электронная почта*:</label>
+                  <input class="contacts__field contacts__field--email" type="text" name="user-email" id="user-email-field" placeholder="Введите e-mail" required>
+                </p>
+              </fieldset>
+            </div>
+            <div class="form__wrapper-radio radio">
+              <fieldset class="radio__fieldset">
+                <div class="radio__title-line">
+                  <div class="radio__title-line-container">
+                    <h3 class="radio__subtitle">Ваше общее впечатление:</h3>
+                  </div>
+                </div>
+                <ul class="radio__list">
+                  <li class="radio__item">
+                    <label class="radio__label-control" for="positive">
+                      <input class="radio__input visually-hidden" type="radio" name="impression" id="positive" value="positive" checked>
+                      <span class="radio__mark"></span>
+                      <span class="radio__label">Скорее положительное</span>
+                    </label>
+                  </li>
+                  <li class="radio__item">
+                    <label class="radio__label-control" for="negative">
+                      <input class="radio__input visually-hidden" type="radio" name="impression" id="negative" value="negative">
+                      <span class="radio__mark"></span>
+                      <span class="radio__label">Скорее отрицательное</span>
+                    </label>
+                  </li>
+                  <li class="radio__item">
+                    <label class="radio__label-control" for="difficult">
+                      <input class="radio__input visually-hidden" type="radio" name="impression" id="difficult" value="difficult">
+                      <span class="radio__mark"></span>
+                      <span class="radio__label">Затрудняюсь ответить</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="form__wrapper-checkbox checkbox">
+              <fieldset class="checkbox__fieldset">
+                <div class="checkbox__title-line">
+                  <div class="checkbox__title-line-container">
+                    <h3 class="checkbox__subtitle">Посещенные достопримечательности:</h3>
+                  </div>
+                </div>
+                <ul class="checkbox__list">
+                  <li class="checkbox__item">
+                    <label class="checkbox__label-control" for="">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="" id="" checked>
+                      <span class="checkbox__mark"></span>
+                      <span class="checkbox__label">Мост Дьявола</span>
+                    </label>
+                  </li>
+                  <li class="checkbox__item">
+                    <label class="checkbox__label-control" for="">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="" id="" checked>
+                      <span class="checkbox__mark"></span>
+                      <span class="checkbox__label">Гора-Колокол</span>
+                    </label>
+                  </li>
+                  <li class="checkbox__item">
+                    <label class="checkbox__label-control" for="">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="" id="" checked>
+                      <span class="checkbox__mark"></span>
+                      <span class="checkbox__label">Слайд-парк</span>
+                    </label>
+                  </li>
+                  <li class="checkbox__item">
+                    <label class="checkbox__label-control" for="">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="" id="">
+                      <span class="checkbox__mark"></span>
+                      <span class="checkbox__label">Красные скалы</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="form__wrapper-comment comment">
+              <fieldset class="comment__fieldset">
+                <div class="comment__title-line">
+                  <div class="comment__title-line-container">
+                    <h3 class="comment__subtitle">Опишите свои эмоции:</h3>
+                  </div>
+                </div>
+                <p class="comment__group">
+                  <label class="comment__text" for="comment"></label>
+                  <textarea class="comment__field" name="comment" id="comment" placeholder="Опишите подробно все свои восторги "></textarea>
+                </p>
+              </fieldset>
+            </div>
 
-              </div>
+
+            <div class="form__wrapper-button">
+              <button class="form__button button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+              <p class="form__meta">* — обязательные поля</p>
             </div>
           </form>
         </div>
-
-
-
       </section>
-
-
     </main>
 
 

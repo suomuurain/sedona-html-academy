@@ -19,7 +19,7 @@
       <div class="main-header__wrapper">
         <a href="index.html" class="main-header__logo">
           <picture>
-            <img src="" alt="Логотип Седоны" class="main-header__logo-icon">
+            <img class="main-header__logo-icon" src="img/logo.svg" alt="Логотип Седоны" width="185" height="96">
           </picture>
         </a>
         <button class="main-header__toggle main-header__toggle--close main-header__toggle--nojs">
@@ -50,7 +50,9 @@
         <h1 class="visually-hidden">Добро пожаловать в Седону.</h1>
         <div class="hero__wrapper">
           <picture>
-            <img src="" alt="Добро пожаловать в Седону" class="hero__image">
+            <source media="(min-width: 1200px)" srcset="img/hero/hero-text-tablet.svg">
+            <source media="(min-width: 768px)" srcset="img/hero/hero-text-tablet.svg">
+            <img class="hero__image" src="img/hero/hero-text-mobile.svg" alt="Добро пожаловать в Седону" width="282" height="214">
           </picture>
         </div>
       </section>
@@ -74,9 +76,11 @@
                   СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
                 </p>
               </div>
-              <div class="advantages__inner-wrapper inner-wrapper__image-wrapper">
+              <div class="advantages__inner-wrapper">
                 <picture>
-                  <img class="inner-wrapper__img">
+                  <source media="(min-width: 1200px)" srcset="img/index/real-town-desktop.jpg 1x, img/index/real-town-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/index/real-town-tablet.jpg 1x, img/index/real-town-tablet@2x.jpg 2x">
+                  <img class="advantages__img" src="img/index/real-town-mobile.jpg" srcset="img/index/real-town-mobile@2x.jpg 2x" alt="Городок Седона" width="320" height="260">
                 </picture>
               </div>
             </li>
@@ -105,9 +109,11 @@
                   Да, по нему можно пройти! Если вы осмелитесь, конечно
                 </p>
               </div>
-              <div class="advantages__inner-wrapper inner-wrapper__image-wrapper">
+              <div class="advantages__inner-wrapper">
                 <picture>
-                  <img class="inner-wrapper__img">
+                  <source media="(min-width: 1200px)" srcset="img/index/canyon-desktop.jpg 1x, img/index/canyon-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/index/canyon-tablet.jpg 1x, img/index/canyon-tablet@2x.jpg 2x">
+                  <img class="advantages__img" src="img/index/canyon-mobile.jpg" srcset="img/index/canyon-mobile@2x.jpg 2x" alt="Мост дьявола" width="320" height="260">
                 </picture>
               </div>
             </li>
@@ -145,7 +151,9 @@
         <h2 class="visually-hidden">Карта Седоны</h2>
         <div class="location__wrapper">
           <picture>
-            <img class="location__img">
+            <source media="(min-width: 1200px)" srcset="img/index/map-desktop.jpg 1x, img/index/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/index/map-tablet.jpg 1x, img/index/map-tablet@2x.jpg 2x">
+            <img class="location__img" src="img/index/map-mobile.jpg" srcset="img/index/map-mobile@2x.jpg 2x" alt="Седона на карте" width="320" height="350">
           </picture>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1001124.0888952167!2d-112.70342640759162!3d34.49162708043003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1683573535040!5m2!1sru!2sru"
