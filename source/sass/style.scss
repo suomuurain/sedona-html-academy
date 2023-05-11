@@ -1,0 +1,34 @@
+@use "global/base.scss";
+@use "global/variables.scss";
+@use "global/mixins.scss";
+@use "global/fonts.scss";
+
+/*all pages*/
+@use "blocks/html-academy.scss";
+@use "blocks/main-footer.scss";
+@use "blocks/main-header.scss";
+@use "blocks/main-nav.scss";
+@use "blocks/social.scss";
+@use "blocks/button.scss";
+
+/*index*/
+
+@use "blocks/advantages.scss";
+@use "blocks/hero.scss";
+@use "blocks/intressted.scss";
+@use "blocks/location.scss";
+
+/*form*/
+
+@use "blocks/intro.scss";
+@use "blocks/form.scss";
+@use "blocks/username.scss";
+@use "blocks/contacts.scss";
+@use "blocks/radio.scss";
+@use "blocks/checkbox.scss";
+@use "blocks/comment.scss";
+
+/*catalog*/
+
+@use "blocks/attractions.scss";
+@use "blocks/video.scss";
