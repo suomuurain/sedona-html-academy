@@ -1,0 +1,44 @@
+@use "global/variables.scss" as *;
+@use "global/mixins.scss" as *;
+
+.form__title {
+  margin: 0;
+  padding: 0;
+  font-family: $font-ptsans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $color-basic-black;
+  text-transform: uppercase;
+}
+
+.form__description {
+  margin: 0;
+  padding: 0;
+  font-family: $font-ptsans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-special-black;
+  text-transform: uppercase;
+}
+
+.form__button {
+  margin: 0;
+  padding: 16px 49px;
+  font-family: $font-ptsans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: $color-basic-white;
+  text-decoration: none;
+}
+
+.form__meta {
+  color: $color-special-black;
+  opacity: 0.6;
+  text-transform: uppercase;
+}

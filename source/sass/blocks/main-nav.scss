@@ -1,0 +1,29 @@
+@use "global/variables.scss" as *;
+@use "global/mixins.scss" as *;
+
+.main-nav__link {
+  font-family: $font-ptsans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $color-basic-white;
+  text-transform: uppercase;
+
+
+  @media (min-width: $tablet-width) {
+    font-family: $font-ptsans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-basic-black;
+    text-transform: uppercase;
+  }
+}
+
+.main-nav__link--current {
+  @media (min-width: $tablet-width) {
+    color: $color-special-current;
+  }
+}

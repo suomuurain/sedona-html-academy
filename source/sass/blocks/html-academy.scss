@@ -1,0 +1,12 @@
+@use "global/variables.scss" as *;
+@use "global/mixins.scss" as *;
+
+.html-academy__description {
+  font-family: $font-ptsans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-basic-black;
+  text-transform: uppercase;
+}

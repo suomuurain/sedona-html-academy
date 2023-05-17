@@ -1,0 +1,18 @@
+@use "global/variables.scss" as *;
+@use "global/mixins.scss" as *;
+
+.button {
+  display: inline-block;
+  font-family: $font-ptsans;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: $color-basic-white;
+  background-color: $color-bg-basic-blue;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
