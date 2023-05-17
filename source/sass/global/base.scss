@@ -9,7 +9,7 @@ body {
   font-size: 14px;
   line-height: 21px;
   color: $color-basic-black;
-  background-color: $color-basic-white;
+  background-color: $color-bg-body;
 }
 
 *,
@@ -21,7 +21,8 @@ body {
 .container {
   min-width: 320px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
+  background-color: $color-basic-white;
 
   @media (min-width: $tablet-width) {
     min-width: 768px;
