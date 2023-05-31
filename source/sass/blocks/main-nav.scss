@@ -27,3 +27,11 @@
     color: $color-special-current;
   }
 }
+
+.main-nav__list {
+  @include list-reset;
+}
+
+.main-nav__link {
+  text-decoration: none;
+}

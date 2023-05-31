@@ -1,2 +1,31 @@
 @use "global/variables.scss" as *;
 @use "global/mixins.scss" as *;
+
+.social__list {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social__item {
+  margin-right: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__item:last-child {
+  margin-right: 0;
+}
+
+.social__link {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-bg-basic-blue;
+  cursor: pointer;
+}

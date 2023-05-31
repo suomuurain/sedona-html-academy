@@ -1,6 +1,25 @@
 @use "global/variables.scss" as *;
 @use "global/mixins.scss" as *;
 
+.main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 36px 136px 36px;;
+  }
+}
+
 .main-footer__title {
   font-family: $font-ptsans;
   font-style: normal;
@@ -10,4 +29,31 @@
   color: $color-basic-black;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.main-footer__tag-wrapper {
+  padding: 38px 0 33px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.main-footer__social {
+  padding-bottom:  40px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.main-footer__html-academy {
+  padding: 0 0 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }

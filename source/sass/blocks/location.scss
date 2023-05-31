@@ -1,2 +1,48 @@
 @use "global/variables.scss" as *;
 @use "global/mixins.scss" as *;
+
+.location__map {
+  width: 100%;
+  height: 350px;
+  display: block;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    height: 350px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 350px;
+  }
+
+  &--nojs {
+    width: 100%;
+    height: 350px;
+    background-image: url("../img/index/map-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/map-mobile@2x.jpg");
+    }
+
+    @media (min-width: $tablet-width) {
+      height: 350px;
+      background-image: url("../img/index/map-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/map-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 350px;
+      background-image: url("../img/index/map-desktop.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/map-desktop@2x.jpg");
+      }
+    }
+  }
+}

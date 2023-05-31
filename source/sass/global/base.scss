@@ -18,7 +18,7 @@ body {
   box-sizing: border-box;
 }
 
-.container {
+.main-container {
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
@@ -27,12 +27,27 @@ body {
   @media (min-width: $tablet-width) {
     min-width: 768px;
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 1200px;
     margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 18px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+    padding: 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
     padding: 0;
   }
 }

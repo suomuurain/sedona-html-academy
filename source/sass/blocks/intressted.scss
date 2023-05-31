@@ -1,30 +1,50 @@
 @use "global/variables.scss" as *;
 @use "global/mixins.scss" as *;
 
+.intressted__wrapper {
+  text-align: center;
+}
+
+
 .intressted__title {
   margin: 0;
-  padding: 0;
+  padding: 38px 0 18px;
   font-family: $font-ptsans;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding: 61px 0 26px;
+    font-size: 30px;
+    line-height: 26px;
+  }
 }
 
 .intressted__description {
   margin: 0;
-  padding: 0;
+  padding: 0 0 32px;
   font-family: $font-ptsans;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 45px;
+  }
 }
 
 .intressted__button {
-  margin: 0;
+  margin: 0 0 49px;
   padding: 16px 49px;
   font-family: $font-ptsans;
   font-style: normal;
@@ -33,4 +53,13 @@
   line-height: 26px;
   color: $color-basic-white;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    width: 458px;
+    margin: 0 0 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 66px;
+  }
 }

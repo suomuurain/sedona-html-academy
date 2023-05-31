@@ -15,12 +15,11 @@
 .hero::before {
   content: "";
   position: absolute;
-  background-image: url("../img/hero/divider-mobile.svg");
+  background-image: url("../source/img/hero/divider-mobile.svg");
   min-height: 57px;
   bottom: 0;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: 1;
 }
 
 .hero__wrapper {

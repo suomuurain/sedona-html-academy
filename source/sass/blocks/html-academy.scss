@@ -1,7 +1,15 @@
 @use "global/variables.scss" as *;
 @use "global/mixins.scss" as *;
 
+.html-academy__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
 .html-academy__description {
+  margin-right: 12px;
   font-family: $font-ptsans;
   font-style: normal;
   font-weight: 400;
