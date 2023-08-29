@@ -51,7 +51,9 @@
           <h1 class="visually-hidden">Городок Седона.</h1>
           <div class="intro__wrapper">
             <picture>
-              <img src="" alt="Добро пожаловать в Седону" class="intro__image">
+              <source media="(min-width: 1200px)" srcset="img/intro/intro-text-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/intro/intro-text-tablet.svg">
+              <img class="intro__image" src="img/intro/intro-text-mobile.svg" alt="Добро пожаловать в Седону" width="229" height="39">
             </picture>
           </div>
         </section>
@@ -66,7 +68,9 @@
               <li class="attractions__item">
                 <div class="attractions__inner-img-wrapper">
                   <picture>
-                    <img src="" alt="Неродные просторы - дорога." class="attractions__img">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/road-desktop.jpg 1x, img/catalog/road-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/road-tablet.jpg 1x, img/catalog/road-tablet@2x.jpg 2x">
+                    <img class="attractions__img attractions__img--first" src="img/catalog/road-mobile.jpg" srcset="img/catalog/road-mobile@2x.jpg 2x" alt="Неродные просторы - дорога." width="280" height="280">
                   </picture>
                 </div>
                 <div class="attractions__unit-wrapper">
@@ -86,9 +90,11 @@
               <li class="attractions__item">
                 <div class="attractions__inner-img-wrapper">
                   <picture>
-                    <img src="" alt="Местная растительность - кактусы." class="attractions__img">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/cactus-desktop.jpg 1x, img/catalog/cactus-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/cactus-tablet.jpg 1x, img/catalog/cactus-tablet@2x.jpg 2x">
+                    <img class="attractions__img" src="img/catalog/cactus-mobile.jpg" srcset="img/catalog/cactus-mobile@2x.jpg 2x" alt="Местная растительность - кактусы." width="280" height="280">
                   </picture>
-              </div>
+                </div>
                 <div class="attractions__unit-wrapper">
                   <div class="attractions__inner-wrapper">
                     <h3 class="attractions__subtitle">
@@ -107,7 +113,9 @@
               <li class="attractions__item">
                 <div class="attractions__inner-img-wrapper">
                   <picture>
-                    <img src="" alt="Дорога на север - серпантин." class="attractions__img">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/to-north-desktop.jpg 1x, img/catalog/to-north-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/to-north-tablet.jpg 1x, img/catalog/to-north-tablet@2x.jpg 2x">
+                    <img class="attractions__img" src="img/catalog/to-north-mobile.jpg" srcset="img/catalog/to-north-mobile@2x.jpg 2x" alt="Дорога на север - серпантин."  width="280" height="280">
                   </picture>
                 </div>
                 <div class="attractions__unit-wrapper">
@@ -127,7 +135,9 @@
               <li class="attractions__item">
                 <div class="attractions__inner-img-wrapper">
                   <picture>
-                    <img src="" alt="Мост дьявола - каньон." class="attractions__img">
+                    <source media="(min-width: 1200px)" srcset="img/catalog/canyon-desktop.jpg 1x, img/catalog/canyon-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/canyon-tablet.jpg 1x, img/catalog/canyon-tablet@2x.jpg 2x">
+                    <img class="attractions__img" src="img/catalog/canyon-mobile.jpg" srcset="img/catalog/canyon-mobile@2x.jpg 2x" alt="Мост дьявола - каньон." width="280" height="280">
                   </picture>
                 </div>
                 <div class="attractions__unit-wrapper">
@@ -151,7 +161,7 @@
         <section class="video container">
           <h2 class="video__title">Все еще сомневаетесь?</h2>
           <p class="video__description">
-            Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
+            Смотрите видеопрезентацию и <br> скорее за билетами, пока они не <br>подорожали в очередной раз!
           </p>
           <div class="video__wrapper">
             <div class="video__items">
@@ -164,6 +174,7 @@
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                   </div>
+
                 </div>
               </div>
             </div>

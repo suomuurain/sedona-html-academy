@@ -51,20 +51,22 @@
           <h1 class="visually-hidden">Городок Седона.</h1>
           <div class="intro__wrapper">
             <picture>
-              <img src="" alt="Добро пожаловать в Седону" class="intro__image">
+              <source media="(min-width: 1200px)" srcset="img/intro/intro-text-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/intro/intro-text-tablet.svg">
+              <img class="intro__image" src="img/intro/intro-text-mobile.svg" alt="Добро пожаловать в Седону" width="229" height="39">
             </picture>
           </div>
         </section>
-        <section class="form container">
+        <section class="form container container--form">
           <div class="form__wrapper-heading">
             <h2 class="form__title">Оставьте свой отзыв</h2>
             <p class="form__description">
-              Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+              Помогите нашим отелям стать лучше! оставьте отзыв о них, &#32;<br class="br-none-for-mobile"> а также о посещенных вами достопримечательностях
             </p>
           </div>
           <div class="form__wrapper">
             <form class="form__application" action="https://echo.htmlacademy.ru/" method="get">
-              <div class="form__wrapper-username username">
+              <div class="form__wrapper-user-contacts">
                 <fieldset class="username__fieldset">
                   <div class="username__inner-wrapper">
                     <h3 class="username__subtitle">Представьтесь:</h3>
@@ -82,22 +84,25 @@
                     <input class="username__field" type="text" name="patronymic" id="user-patronymic-field" placeholder="Отчество" required>
                   </p>
                 </fieldset>
+
+                <div class="form__wrapper-contacts contacts">
+                  <fieldset class="contacts__fieldset">
+                    <div class="contacts__inner-wrapper">
+                      <h3 class="contacts__subtitle">Контактная информация:</h3>
+                    </div>
+                    <p class="contacts__group">
+                      <label class="contacts__text" for="user-phone-field">Контактный телефон*:</label>
+                      <input class="contacts__field contacts__field--phone" type="text" name="user-phone" id="user-phone-field" placeholder="Введите телефон" required>
+                    </p>
+                    <p class="contacts__group">
+                      <label class="contacts__text" for="user-phone-email">Электронная почта*:</label>
+                      <input class="contacts__field contacts__field--email" type="text" name="user-email" id="user-email-field" placeholder="Введите e-mail" required>
+                    </p>
+                  </fieldset>
+                </div>
+
               </div>
-              <div class="form__wrapper-contacts contacts">
-                <fieldset class="contacts__fieldset">
-                  <div class="contacts__inner-wrapper">
-                    <h3 class="contacts__subtitle">Контактная информация:</h3>
-                  </div>
-                  <p class="contacts__group">
-                    <label class="contacts__text" for="user-phone-field">Контактный телефон*:</label>
-                    <input class="contacts__field contacts__field--phone" type="text" name="user-phone" id="user-phone-field" placeholder="Введите телефон" required>
-                  </p>
-                  <p class="contacts__group">
-                    <label class="contacts__text" for="user-phone-email">Электронная почта*:</label>
-                    <input class="contacts__field contacts__field--email" type="text" name="user-email" id="user-email-field" placeholder="Введите e-mail" required>
-                  </p>
-                </fieldset>
-              </div>
+
               <div class="form__wrapper-radio radio">
                 <fieldset class="radio__fieldset">
                   <div class="radio__title-line">
