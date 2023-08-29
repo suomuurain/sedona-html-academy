@@ -31,12 +31,10 @@
   color: $color-basic-black;
   text-transform: uppercase;
   text-decoration: none;
-
-
 }
 
 .main-footer__tag-wrapper {
-  padding: 38px 0 33px;
+  padding: 38px 0 34px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -48,6 +46,11 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    margin-right: -11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
   }
 }
 

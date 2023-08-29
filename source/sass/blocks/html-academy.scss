@@ -18,3 +18,13 @@
   color: $color-basic-black;
   text-transform: uppercase;
 }
+
+.html-academy__icon {
+  @media (min-width: $tablet-width) {
+    margin-right: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+  }
+}
