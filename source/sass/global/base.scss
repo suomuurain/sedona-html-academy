@@ -39,7 +39,7 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 0 18px;
+  padding: 0 20px;
 
   @media (min-width: $tablet-width) {
     min-width: 768px;
@@ -49,6 +49,12 @@ body {
   @media (min-width: $desktop-width) {
     width: 1200px;
     padding: 0;
+  }
+
+  &--form {
+    @media (min-width: $desktop-width) {
+      padding: 0 120px;
+    }
   }
 }
 
@@ -63,4 +69,32 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.picture {
+  line-height: 0;
+}
+
+.br-none-for-mobile {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.br-none-for-tablet {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.br-none-for-desktop {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
