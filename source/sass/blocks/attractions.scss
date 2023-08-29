@@ -1,9 +1,59 @@
 @use "global/variables.scss" as *;
 @use "global/mixins.scss" as *;
 
+.attractions__list {
+  @include list-reset;
+}
+
+.attractions__item {
+  margin: 0;
+  padding: 24px 0;
+  border-top: 1px solid $color-border-gray;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.attractions__item:last-child {
+  border-bottom: 1px solid $color-border-gray;
+}
+
+.attractions__img {
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    height: 267px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 400px;
+    height: 267px;
+  }
+
+  &--first {
+
+    @media (min-width: $tablet-width) {
+      width: 648px;
+      height: 400px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1200px;
+      height: 400px;
+    }
+  }
+}
+
+.attractions__inner-wrapper {
+  margin: 15px 0 11px;
+}
+
 .attractions__title {
   margin: 0;
-  padding: 0;
+  padding: 36px 0 26px;
   font-family: $font-ptsans;
   font-style: normal;
   font-weight: 700;
@@ -11,11 +61,17 @@
   line-height: 26px;
   color: $color-basic-black;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .attractions__description {
   margin: 0;
   padding: 0;
+  padding-bottom: 25px;
   font-family: $font-ptsans;
   font-style: normal;
   font-weight: 400;
@@ -23,6 +79,7 @@
   line-height: 21px;
   color: $color-special-black;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .attractions__subtitle {
@@ -50,7 +107,8 @@
 
 .attractions__likes-count {
   margin: 0;
-  padding: 0;
+  padding: 2px 0 0;
+  padding-left: 37px;
   font-family: $font-ptsans;
   font-style: normal;
   font-weight: 700;
@@ -58,3 +116,19 @@
   line-height: 21px;
   color: $color-special-black;
 }
+
+.attractions__likes {
+  background-image: url("../img/like-icon.svg");
+  background-repeat: no-repeat;
+  background-position:  0 0;
+}
+
+// .attractions__likes-count::before {
+//   content: "";
+//   width: 23px;
+//   height: 21px;
+//   display: block;
+//   background-image: url("../img/like-icon.svg");
+//   background-repeat: no-repeat;
+//   background-position: 0 0;
+// }

@@ -51,7 +51,7 @@
 }
 
 .video__items{
-  padding: 40px 0;
+  padding: 40px 0 0;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 84px;
@@ -65,8 +65,8 @@
 
 .video__items-body {
   display: grid;
-  grid-template: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .video__item-video {

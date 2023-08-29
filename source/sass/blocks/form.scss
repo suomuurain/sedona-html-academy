@@ -1,9 +1,29 @@
 @use "global/variables.scss" as *;
 @use "global/mixins.scss" as *;
 
+.form {
+  @media (min-width: $tablet-width) {
+    padding-bottom: 64px;
+  }
+}
+
+.form__wrapper-heading {
+  padding: 36px 0 28px;
+  border-bottom: 1px solid $color-border-gray;
+
+  @media (min-width: $tablet-width) {
+    padding: 64px 0 102px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 115px 0 67px;
+  }
+}
+
 .form__title {
   margin: 0;
-  padding: 0;
+  padding: 0 0 26px;
   font-family: $font-ptsans;
   font-style: normal;
   font-weight: 700;
@@ -11,6 +31,11 @@
   line-height: 26px;
   color: $color-basic-black;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .form__description {
@@ -23,6 +48,23 @@
   line-height: 21px;
   color: $color-special-black;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.form__wrapper-user-contacts {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+.form__wrapper-button {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .form__button {
@@ -38,7 +80,14 @@
 }
 
 .form__meta {
+  margin: 0;
+  padding: 3px 0 0;
   color: $color-special-black;
   opacity: 0.6;
   text-transform: uppercase;
+  text-align: end;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }

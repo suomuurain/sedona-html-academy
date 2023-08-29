@@ -1,2 +1,64 @@
 @use "global/variables.scss" as *;
 @use "global/mixins.scss" as *;
+
+.intro {
+  margin: 0 auto;
+  min-width: 320px;
+  min-height: calc(214px - 56px);
+  background-color: $color-bg-basic-blue;
+  background-image: url("../img/intro/intro-bg-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+    max-width: 1199px;
+    min-height: calc(518px - 56px);
+    background-image: url("../img/intro/intro-bg-desktop.jpg");
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    min-height: calc(518px - 56px);
+  }
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/intro/divider.svg");
+  min-height: 57px;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.intro__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(214px - 56px);
+
+  @media (min-width: $tablet-width) {
+    height: calc(518px - 56px);
+  }
+
+  @media (min-width: $desktop-width) {
+    height: calc(518px - 56px);
+  }
+}
+
+.intro__image {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 457px;
+    height: 78px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 460px;
+    height: 80px;
+  }
+}

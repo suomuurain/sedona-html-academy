@@ -10,26 +10,69 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+    max-width: 1199px;
+    min-height: 518px;
+    background-image: url("../img/hero/hero-desktop.jpg");
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    min-height: 518px;
+  }
 }
 
 .hero::before {
   content: "";
   position: absolute;
-  background-image: url("../source/img/hero/divider-mobile.svg");
-  min-height: 57px;
+  display: block;
+  background-image: url("../img/hero/divider-mobile.svg");
+  width: 100%;
+  height: 57px;
   bottom: 0;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/hero/divider-tablet.svg");
+    width: 100%;
+    height: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/hero/divider-desktop.svg");
+    width: 100%;
+    height: 57px;
+  }
 }
 
 .hero__wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 320px;
   height: 389px;
+
+  @media (min-width: $tablet-width) {
+    height: 518px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 518px;
+  }
 }
 
 .hero__image {
   display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 461px;
+    height: 350px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 460px;
+    height: 350px;
+  }
 }

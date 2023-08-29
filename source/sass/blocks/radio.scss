@@ -1,7 +1,124 @@
 @use "global/variables.scss" as *;
 @use "global/mixins.scss" as *;
 
+.radio__fieldset {
+  margin: 0;
+  padding: 24px 0 0;
+  border: none;
+  border-bottom: 1px solid $color-border-gray;
+
+  @media (min-width: $tablet-width) {
+    padding: 48px 0 0;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 56px 0 0;
+  }
+}
+
 .radio__subtitle {
+  margin: 0;
+  padding: 0 0 20px;
+  font-family: $font-ptsans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $color-basic-black;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 28px;
+    font-size: 21px;
+  }
+}
+
+.radio__list {
+  @include list-reset;
+  padding: 0 0 8px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 36px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 17px 53px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+}
+
+.radio__item {
+  padding: 16px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+/*control*/
+.radio__label-control {
+  position: relative;
+  display: block;
+  padding: 0 0 0 62px;
+  line-height: 46px;
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &:hover .radio__mark {
+    background-color: $color-bg-form-hover;
+  }
+
+  &:active .radio__mark {
+    background-color: $color-bg-form-active;
+  }
+}
+
+.radio__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  border-radius: 50%;
+
+  background-color: $color-bg-form;
+
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.radio__input:focus + .radio__mark {
+  outline: 2px solid $color-bg-gray;
+}
+
+.radio__input[type="radio"] + .radio__mark {
+  border-radius: 50%;
+}
+
+.radio__input[type="radio"]:checked + .radio__mark::before {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 16px;
+  height: 16px;
+  background-color: $color-basic-black;
+  border-radius: 50%;
+  content: "";
+}
+
+.radio__label {
   margin: 0;
   padding: 0;
   font-family: $font-ptsans;
@@ -10,18 +127,5 @@
   font-size: 18px;
   line-height: 26px;
   color: $color-basic-black;
-  text-transform: uppercase;
-}
-
-.radio__label {
-  font-family: $font-ptsans;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  color: $color-basic-black;
-}
-
-.radio__mark {
-  background-color: $color-bg-form;
+  cursor: pointer;
 }

@@ -1,7 +1,121 @@
 @use "global/variables.scss" as *;
 @use "global/mixins.scss" as *;
 
+.checkbox__fieldset {
+  margin: 0;
+  padding: 24px 0 0;
+  border: none;
+  border-bottom: 1px solid $color-border-gray;
+
+  @media (min-width: $tablet-width) {
+    padding: 48px 0 0;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 56px 0 0;
+  }
+}
+
 .checkbox__subtitle {
+  margin: 0;
+  padding: 0 0 20px;
+  font-family: $font-ptsans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $color-basic-black;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 28px;
+    font-size: 21px;
+  }
+}
+
+.checkbox__list {
+  @include list-reset;
+  padding: 0 0 8px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 84px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    row-gap: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 31px 44px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 64px;
+    row-gap: 16px;
+  }
+}
+
+.checkbox__item {
+  padding: 16px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+/*control*/
+.checkbox__label-control {
+  position: relative;
+  display: block;
+  padding: 0 0 0 62px;
+  line-height: 46px;
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &:hover .checkbox__mark {
+    background-color: $color-bg-form-hover;
+  }
+
+  &:active .checkbox__mark {
+    background-color: $color-bg-form-active;
+  }
+}
+
+.checkbox__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  background-color: $color-bg-form;
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.checkbox__input:focus + .checkbox__mark {
+  outline: 2px solid $color-bg-gray;
+}
+
+.checkbox__input[type="checkbox"]:checked + .checkbox__mark::before {
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  width: 22px;
+  height: 16px;
+  background-image: url("../img/check-icon.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.checkbox__label {
   margin: 0;
   padding: 0;
   font-family: $font-ptsans;
@@ -10,18 +124,5 @@
   font-size: 18px;
   line-height: 26px;
   color: $color-basic-black;
-  text-transform: uppercase;
-}
-
-.checkbox__label {
-  font-family: $font-ptsans;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  color: $color-basic-black;
-}
-
-.checkbox__mark {
-  background-color: $color-bg-form;
+  cursor: pointer;
 }

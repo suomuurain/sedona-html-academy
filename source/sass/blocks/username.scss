@@ -1,9 +1,27 @@
 @use "global/variables.scss" as *;
 @use "global/mixins.scss" as *;
 
+.username__fieldset {
+  margin: 0;
+  padding: 24px 0 23px;
+  border: none;
+  border-bottom: 1px solid $color-border-gray;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 44px 0 0;
+
+    border: none;
+    border-right: 1px solid $color-border-gray;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 63px 0 0;
+  }
+}
+
 .username__subtitle {
   margin: 0;
-  padding: 0;
+  padding: 0 0 20px;
   font-family: $font-ptsans;
   font-style: normal;
   font-weight: 700;
@@ -11,11 +29,22 @@
   line-height: 26px;
   color: $color-basic-black;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 28px;
+    font-size: 21px;
+  }
+}
+
+.username__group {
+  margin: 0 0 16px;
+  padding: 0;
 }
 
 .username__text {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 16px;
   font-family: $font-ptsans;
   font-style: normal;
   font-weight: 400;
@@ -26,6 +55,9 @@
 }
 
 .username__field {
+  margin: 0;
+  padding: 16px 16px;
+  min-width: 100%;
   font-family: $font-ptsans;
   font-style: normal;
   font-weight: 700;
@@ -33,4 +65,6 @@
   line-height: 26px;
   color: $color-basic-black;
   background-color: $color-bg-form;
+  border: none;
+  opacity: 0.6;
 }

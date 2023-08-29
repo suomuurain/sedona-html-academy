@@ -2,18 +2,85 @@
 @use "global/mixins.scss" as *;
 
 .main-header {
-  background-color: $color-bg-basic-white;
-}
+  position: relative;
 
+  display: flex;
+  justify-content: center;
 
-.main-header__main-nav {
-  background-color: $color-bg-basic-blue;
+  min-height: 56px;
 
   @media (min-width: $tablet-width) {
-    background-color: $color-bg-basic-white;
+    padding: 0;
   }
 
-  @media (min-width: $desktop-width) {
-    background-color: $color-bg-basic-white;
+  &--nojs {
+    flex-direction: column;
+    align-items: center;
   }
+}
+
+.main-header__logo {
+  position: absolute;
+
+  width: 185px;
+  height: 96px;
+
+  justify-self: center;
+  z-index: 2;
+
+  &--nojs {
+    bottom: -96px;
+  }
+}
+
+.main-header__toggle {
+  position: absolute;
+  content: "";
+  top: 16px;
+  right: 25px;
+
+  width: 22.9px;
+  height: 22px;
+
+  border: none;
+  background-color: transparent;
+  fill: $color-special-hover;
+  opacity: 1;
+  z-index: 4;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &--opened {
+    right: 25px;
+
+    width: 22.2px;
+    height: 22.2px;
+    fill: $color-basic-white;
+  }
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.main-header__icon--cross {
+  display: none;
+}
+
+.main-header__toggle--opened .main-header__icon--cross {
+  display: block;
+}
+
+.main-header__toggle--opened .main-header__icon--burger {
+  display: none;
 }
