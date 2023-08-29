@@ -1,7 +1,7 @@
 @use "global/variables.scss" as *;
 @use "global/mixins.scss" as *;
 
-.site-list {
+.nav-list {
   @include list-reset;
   width: 100%;
   position: relative;
@@ -42,7 +42,7 @@
   }
 }
 
-.site-list__item {
+.nav-list__item {
   position: relative;
   display: flex;
   width: calc(100% / 5);
@@ -52,15 +52,15 @@
   }
 }
 
-.site-list__item:nth-child(2n):not(:nth-child(4n)) {
+.nav-list__item:nth-child(2n):not(:nth-child(4n)) {
   margin-right: calc(100% / 5);
 }
 
-.site-list--opened .site-list__item {
+.nav-list--opened .nav-list__item {
   width: 100%;
 }
 
-.site-list__link {
+.nav-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,11 +97,11 @@
   }
 }
 
-.site-list--opened .site-list__link {
+.nav-list--opened .nav-list__link {
   color: $color-basic-white;
 }
 
-.site-list__item--current .site-list__link {
+.nav-list__item--current .nav-list__link {
   color: $color-basic-white;
 
   @media (min-width: $tablet-width) {
@@ -109,6 +109,6 @@
   }
 }
 
-.site-list--opened .site-list__item:nth-child(2n):not(:nth-child(4n)) {
+.nav-list--opened .nav-list__item:nth-child(2n):not(:nth-child(4n)) {
   margin-right: 0;
 }
