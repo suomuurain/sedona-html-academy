@@ -15,7 +15,7 @@
 
 
   @media (min-width: $tablet-width) {
-    padding-top: 57px;
+    padding: 57px 0 34px;
     font-size: 30px;
   }
 
@@ -26,7 +26,7 @@
 
 .video__description {
   margin: 0;
-  padding: 0;
+  padding: 0 6px;
   font-family: $font-ptsans;
   font-style: normal;
   font-weight: 400;

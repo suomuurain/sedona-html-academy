@@ -14,24 +14,38 @@
   @media (min-width: $tablet-width) {
     min-width: 768px;
     max-width: 1199px;
-    min-height: calc(518px - 56px);
+    min-height: 290px;
     background-image: url("../img/intro/intro-bg-desktop.jpg");
   }
 
   @media (min-width: $desktop-width) {
     width: 1200px;
-    min-height: calc(518px - 56px);
+    min-height: 300px;
   }
 }
 
 .intro::before {
   content: "";
   position: absolute;
-  background-image: url("../img/intro/divider.svg");
-  min-height: 57px;
+  display: block;
+  background-image: url("../img/hero/divider-mobile.svg");
+  width: 100%;
+  height: 57px;
   bottom: 0;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/hero/divider-tablet.svg");
+    width: 100%;
+    height: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/hero/divider-desktop.svg");
+    width: 100%;
+    height: 57px;
+  }
 }
 
 .intro__wrapper {
@@ -41,11 +55,11 @@
   height: calc(214px - 56px);
 
   @media (min-width: $tablet-width) {
-    height: calc(518px - 56px);
+    height: 290px;
   }
 
   @media (min-width: $desktop-width) {
-    height: calc(518px - 56px);
+    height: 300px;
   }
 }
 
