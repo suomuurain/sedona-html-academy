@@ -143,7 +143,7 @@
                 <fieldset class="checkbox__fieldset">
                   <div class="checkbox__title-line">
                     <div class="checkbox__title-line-container">
-                      <h3 class="checkbox__subtitle">Посещенные достопримечательности:</h3>
+                      <h3 class="checkbox__subtitle">Посещенные <br>достопримечательности:</h3>
                     </div>
                   </div>
                   <ul class="checkbox__list">
@@ -253,6 +253,27 @@
           </section>
         </div>
       </footer>
+
+      <div class="modal-container modal-container--close">
+        <div class="modal modal--error">
+          <p class="modal__title">Что-то пошло не так!</p>
+          <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          <button class="button modal__button modal__button--error" type="button">Ок</button>
+        </div>
+      </div>
+
+      <div class="modal-container modal-container--close">
+        <div class="modal modal--success">
+          <p class="modal__title modal__title--success">Ваш отзыв отправлен!</p>
+          <p class="modal__description modal__description--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее
+            время мы опубликуем его
+            на
+            сайте.</p>
+          <div class="modal__wrapper">
+            <button class="button modal__button modal__button--success" type="button">Закрыть окно</button>
+          </div>
+        </div>
+      </div>
       <script src="js/script.js"></script>
     </div>
   </body>

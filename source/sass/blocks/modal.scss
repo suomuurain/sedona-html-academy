@@ -1,0 +1,106 @@
+@use "global/variables.scss" as *;
+@use "global/mixins.scss" as *;
+
+.modal {
+  width: 100%;
+  background-color: $color-basic-white;
+  box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+
+  &--error {
+    height: 305px;
+    padding: 45px 42px 35px;
+  }
+
+  &--success {
+    height: 323px;
+    padding: 39px 39px 0;
+  }
+
+  @media (min-width: $tablet-width) {
+
+    &--error {
+      width: 400px;
+      height: 347px;
+    }
+
+    &--success {
+      width: 640px;
+      height: 347px;
+    }
+  }
+
+}
+
+.modal__title {
+  margin: 0 0 26px;
+  padding: 0;
+  color: $color-basic-black;
+  text-align: center;
+  font-family: $font-ptsans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.modal__description {
+  margin: 0 0 50px;
+  padding: 0;
+  color: $color-special-black;
+  text-align: center;
+  font-family: $font-ptsans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.modal__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: $color-bg-form;
+
+  @media (min-width: $tablet-width) {
+    padding: 46px 91px;
+  }
+}
+
+.modal__button {
+  &--error {
+    width: 180px;
+    height: 58px;
+    margin: 0 auto;
+    padding: 18px 64px;
+
+    @media (min-width: $tablet-width) {
+      width: 272px;
+      height: 58px;
+      padding: 18px 107px;
+    }
+  }
+
+  &--success {
+    width: 280px;
+    height: 58px;
+    padding: 18px 62px;
+
+    @media (min-width: $tablet-width) {
+      width: 458px;
+      height: 58px;
+      padding: 18px 140px;
+    }
+  }
+}
