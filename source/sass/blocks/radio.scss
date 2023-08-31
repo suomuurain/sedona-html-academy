@@ -10,6 +10,7 @@
   @media (min-width: $tablet-width) {
     padding: 48px 0 0;
     border: none;
+    position: relative;
   }
 
   @media (min-width: $desktop-width) {
@@ -17,9 +18,44 @@
   }
 }
 
+.radio__title-line::after {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 60px;
+    left: 525px;
+    height: 1px;
+    width: 123px;
+    background-color: #dbdbdb;
+    content: "";
+
+    @media (min-width: $desktop-width) {
+      top: 68px;
+      left: 680px;
+      width: 280px;
+    }
+  }
+}
+
+.radio__title-line::before {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    height: 1px;
+    width: 123px;
+    background-color: #dbdbdb;
+    content: "";
+
+    @media (min-width: $desktop-width) {
+      top: 68px;
+      width: 280px;
+    }
+  }
+}
+
 .radio__subtitle {
   margin: 0;
-  padding: 0 0 20px;
+  padding: 0 0 12px;
   font-family: $font-ptsans;
   font-style: normal;
   font-weight: 700;
@@ -46,16 +82,16 @@
     gap: 16px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     padding: 17px 53px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    gap: 57px;
   }
 }
 
 .radio__item {
-  padding: 16px 0;
+  padding: 8px 0;
 
   @media (min-width: $tablet-width) {
     padding: 0;

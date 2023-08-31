@@ -3,15 +3,51 @@
 
 .comment__fieldset {
   margin: 0;
-  padding: 24px 0 0;
+  padding: 32px 0 0;
   border: none;
 
   @media (min-width: $tablet-width) {
-    padding: 48px 0 0;
+    padding: 42px 0 0;
+    position: relative;
   }
 
   @media (min-width: $desktop-width) {
     padding: 56px 0 0;
+  }
+}
+
+.comment__title-line::after {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 54px;
+    left: 525px;
+    height: 1px;
+    width: 123px;
+    background-color: #dbdbdb;
+    content: "";
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 70px;
+    left: 680px;
+    width: 280px;
+  }
+}
+
+.comment__title-line::before {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 54px;
+    left: 0px;
+    height: 1px;
+    width: 123px;
+    background-color: #dbdbdb;
+    content: "";
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 70px;
+    width: 280px;
   }
 }
 
@@ -34,11 +70,15 @@
 }
 
 .comment__group {
-  margin: 0 0 56px;
+  margin: 0 0 49px;
   padding: 0;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 48px;
+    margin: 0 0 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 96px;
   }
 }
 

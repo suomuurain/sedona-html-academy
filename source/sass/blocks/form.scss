@@ -36,6 +36,10 @@
   @media (min-width: $tablet-width) {
     font-size: 30px;
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 33px;
+  }
 }
 
 .form__description {
@@ -60,10 +64,17 @@
 }
 
 .form__wrapper-button {
+  padding: 0 0 14px;
+
   @media (min-width: $tablet-width) {
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 96px;
   }
 }
 
@@ -77,6 +88,14 @@
   line-height: 26px;
   color: $color-basic-white;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 16px 71px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 16px 101px;
+  }
 }
 
 .form__meta {
