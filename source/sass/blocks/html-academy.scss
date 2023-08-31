@@ -6,9 +6,7 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-}
 
-.html-academy__description {
   margin-right: 12px;
   font-family: $font-ptsans;
   font-style: normal;
@@ -17,9 +15,20 @@
   line-height: 21px;
   color: $color-basic-black;
   text-transform: uppercase;
+
+  &:hover {
+    color: $color-basic-blue;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
 }
 
 .html-academy__icon {
+  margin-left: 12px;
+
   @media (min-width: $tablet-width) {
     margin-right: 16px;
   }

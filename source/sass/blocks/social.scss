@@ -14,10 +14,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.social__item:last-child {
-  margin-right: 0;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:active {
+    background-color: $color-button-blue-active;
+  }
 }
 
 .social__link {
@@ -28,4 +32,14 @@
   align-items: center;
   background-color: $color-bg-basic-blue;
   cursor: pointer;
+
+  &:hover {
+    background-color: $color-basic-blue-hover;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $color-button-blue-active;
+    opacity: 0.3;
+  }
 }
