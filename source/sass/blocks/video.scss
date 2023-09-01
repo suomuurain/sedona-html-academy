@@ -50,7 +50,7 @@
   flex-direction: column;
 }
 
-.video__items{
+.video__items {
   padding: 40px 0 0;
 
   @media (min-width: $tablet-width) {
@@ -75,7 +75,7 @@
 }
 
 .video__item-video video,
-.video__item-video iframe{
+.video__item-video iframe {
   object-fit: cover;
   position: absolute;
   top: 0;

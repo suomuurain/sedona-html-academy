@@ -48,7 +48,7 @@
   width: calc(100% / 5);
 
   @media (max-width: $tablet-width) {
-    box-shadow: 0px 1px 0px 0px rgba(1, 1, 1, 0.20), 0px 1px 0px 0px rgba(255, 255, 255, 0.20) inset;
+    box-shadow: 0 1px 0 0 rgba(1, 1, 1, 0.2), 0 1px 0 0 rgba(255, 255, 255, 0.2) inset;
   }
 }
 

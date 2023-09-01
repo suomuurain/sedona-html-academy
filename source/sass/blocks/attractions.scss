@@ -64,7 +64,6 @@
   }
 
   &--first {
-
     @media (min-width: $tablet-width) {
       width: 648px;
       height: 400px;
@@ -89,7 +88,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 22px 26px 15px 26px;
-    background-color: rgba(0,0,0,.3);
+    background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
     margin-top: -80px;
     z-index: 20;
@@ -206,7 +205,7 @@
 .attractions__likes {
   background-image: url("../img/like-icon.svg");
   background-repeat: no-repeat;
-  background-position:  0 0;
+  background-position: 0 0;
 
   @media (min-width: $desktop-width) {
     background-image: url("../img/like-icon-desktop.svg");

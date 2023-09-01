@@ -34,7 +34,7 @@ body {
     width: 1200px;
     margin: 0 auto;
     padding: 0;
-    box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.20);
+    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
   }
 }
 
@@ -70,10 +70,10 @@ body {
 
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 2;
-}
 
-.modal-container--close {
-  display: none;
+  &--close {
+    display: none;
+  }
 }
 
 .visually-hidden {
