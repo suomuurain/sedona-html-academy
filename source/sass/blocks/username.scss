@@ -66,5 +66,27 @@
   color: $color-basic-black;
   background-color: $color-bg-form;
   border: none;
-  opacity: 0.6;
+
+  &::placeholder {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    color: $color-basic-black;
+    opacity: 0.3;
+  }
+
+  &:hover {
+    outline: 4px solid $color-bg-form-hover;
+    background-color: $color-bg-form-hover;
+  }
+
+  &:focus {
+    outline: 4px solid $color-bg-body;
+    background-color: $color-bg-body;
+  }
+
+  &:active {
+    outline: 4px solid $color-bg-form-hover;
+    background-color: $color-bg-basic-white;
+  }
 }
