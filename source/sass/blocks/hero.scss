@@ -11,11 +11,19 @@
   background-repeat: no-repeat;
   position: relative;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero/hero-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
     min-width: 768px;
     max-width: 1199px;
     min-height: 518px;
     background-image: url("../img/hero/hero-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero/hero-desktop@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {

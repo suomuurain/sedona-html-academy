@@ -11,11 +11,19 @@
   background-repeat: no-repeat;
   position: relative;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/intro/intro-bg-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
     min-width: 768px;
     max-width: 1199px;
     min-height: 290px;
     background-image: url("../img/intro/intro-bg-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro/intro-bg-desktop@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
