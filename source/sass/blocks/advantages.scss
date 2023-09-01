@@ -21,24 +21,6 @@
   }
 }
 
-.advantages__intro::before {
-  content: "";
-  position: absolute;
-  display: block;
-  background-image: url("../img/index/divider-mobile-advantage.svg");
-  width: 100%;
-  height: 37px;
-  bottom: -49px;
-  left: 0;
-  right: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
 .advantages__main-title {
   margin: 0;
   padding: 0 0 35px;
@@ -144,6 +126,31 @@
     @media (min-width: $tablet-width) {
       padding: 0;
     }
+  }
+}
+
+.advantages__item--first {
+  position: relative;
+}
+
+.advantages__item--first::before {
+  @media (max-width: 330px) and (min-width: $mobile-width) {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("../img/index/divider-mobile-advantage.svg");
+    width: 100%;
+    height: 37px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
@@ -333,10 +340,13 @@
 
 .advantages__img {
   display: block;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     width: 512px;
     height: 256px;
+    margin-right: 0;
+    margin-left: auto;
   }
 
   @media (min-width: $desktop-width) {

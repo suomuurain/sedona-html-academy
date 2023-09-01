@@ -20,7 +20,7 @@
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 54px;
-    left: 525px;
+    right: 0;
     height: 1px;
     width: 123px;
     background-color: #dbdbdb;
@@ -29,7 +29,6 @@
 
   @media (min-width: $desktop-width) {
     top: 70px;
-    left: 680px;
     width: 280px;
   }
 }
@@ -96,9 +95,31 @@
   color: $color-basic-black;
   background-color: $color-bg-form;
   border: none;
-  opacity: 0.6;
 
   @media (min-width: $tablet-width) {
     height: 160px;
+  }
+
+  &::placeholder {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    color: $color-basic-black;
+    opacity: 0.3;
+  }
+
+  &:hover {
+    outline: 4px solid $color-bg-form-hover;
+    background-color: $color-bg-form-hover;
+  }
+
+  &:focus {
+    outline: 4px solid $color-bg-body;
+    background-color: $color-bg-body;
+  }
+
+  &:active {
+    outline: 4px solid $color-bg-form-hover;
+    background-color: $color-bg-basic-white;
   }
 }

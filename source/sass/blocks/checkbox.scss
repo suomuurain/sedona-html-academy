@@ -22,7 +22,7 @@
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 72px;
-    left: 525px;
+    right: 0;
     height: 1px;
     width: 123px;
     background-color: #dbdbdb;
@@ -31,7 +31,6 @@
 
   @media (min-width: $desktop-width) {
     top: 81px;
-    left: 680px;
     width: 280px;
   }
 }
@@ -161,4 +160,8 @@
   line-height: 26px;
   color: $color-basic-black;
   cursor: pointer;
+}
+
+.checkbox__label-control:active .checkbox__mark::before {
+  opacity: 30%;
 }

@@ -22,7 +22,7 @@
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 60px;
-    left: 525px;
+    right: 0;
     height: 1px;
     width: 123px;
     background-color: #dbdbdb;
@@ -30,7 +30,6 @@
 
     @media (min-width: $desktop-width) {
       top: 68px;
-      left: 680px;
       width: 280px;
     }
   }
@@ -164,4 +163,8 @@
   line-height: 26px;
   color: $color-basic-black;
   cursor: pointer;
+}
+
+.radio__label-control:active .radio__mark::before {
+  opacity: 30%;
 }
