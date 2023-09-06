@@ -68,7 +68,7 @@
               Помогите нашим отелям стать лучше! оставьте отзыв о них, &#32;<br class="br-none-for-mobile"> а также о посещенных вами достопримечательностях
             </p>
           </div>
-          <form class="form__application" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="form__application" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
             <div class="form__wrapper-user-contacts">
               <fieldset class="username__fieldset">
                 <h3 class="username__subtitle">Представьтесь:</h3>
@@ -242,27 +242,31 @@
         </div>
       </footer>
 
-      <div class="modal-container modal-container--close">
-        <div class="modal modal--error">
-          <p class="modal__title">Что-то пошло не так!</p>
-          <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-          <button class="button modal__button modal__button--error" type="button">Ок</button>
-        </div>
-      </div>
-
-      <div class="modal-container modal-container--close">
-        <div class="modal modal--success">
-          <p class="modal__title modal__title--success">Ваш отзыв отправлен!</p>
-          <p class="modal__description modal__description--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее
-            время мы опубликуем его
-            на
-            сайте.</p>
-          <div class="modal__wrapper">
-            <button class="button modal__button modal__button--success" type="button">Закрыть окно</button>
+      <template id="error">
+        <div class="error">
+          <div class="error__modal">
+            <p class="error__title">Что-то пошло не так!</p>
+            <p class="error__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+            <button class="button error__button" type="button">Ок</button>
           </div>
         </div>
-      </div>
-      <script src="js/script.js"></script>
+      </template>
+
+      <template id="success">
+        <div class="success">
+          <div class="success__modal">
+            <p class="success__title">Ваш отзыв отправлен!</p>
+            <p class="success__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее
+              время мы опубликуем его
+              на
+              сайте.</p>
+            <div class="success__wrapper">
+              <button class="button success__button" type="button">Закрыть окно</button>
+            </div>
+          </div>
+        </div>
+      </template>
     </div>
+    <script src="js/script.js" type="module"></script>
   </body>
 </html>
