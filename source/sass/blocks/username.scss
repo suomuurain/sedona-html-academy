@@ -40,6 +40,11 @@
 .username__group {
   margin: 0 0 16px;
   padding: 0;
+
+  &--error {
+    background-color: #d75555;
+    color: $color-basic-black;
+  }
 }
 
 .username__text {
