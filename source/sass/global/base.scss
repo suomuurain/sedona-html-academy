@@ -101,6 +101,11 @@ body {
 }
 
 .pristine-form--error {
-  background-color: #d75555;
+  padding: 5px 10px;
+  font-family: $font-ptsans;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  background-color: #f16e6e;
   color: $color-basic-black;
 }
