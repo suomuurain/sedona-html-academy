@@ -1,3 +1,5 @@
+//только для проверки отправки формы. ответ = сообщение с ошибкой
+
 const BASE_URL = 'https://echo.htmlacademy.ru';
 const Route = {
   GET_DATA: '/data',

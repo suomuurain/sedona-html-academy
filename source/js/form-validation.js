@@ -1,14 +1,14 @@
 import {sendData} from './api.js';
 import {createSuccessMessage, createErrorMessage} from './modal-message.js';
 
-const USERNAME_MAX_LENGTH = 30;
+const USERNAME_MAX_LENGTH = 10;
 const USERNAME_ERROR_TEXT = `Нельзя указать больше ${USERNAME_MAX_LENGTH} символов.`;
 
 const PHONE_VALID_SYMBOLS = /^[\d\+][\d\(\)\ -]{4,14}\d$/;
-const PHONE_ERROR_TEXT = `Номер должен быть валидным. Необходимо указать код страны, начинающийся с +.`;
+const PHONE_ERROR_TEXT = `Номер должен быть валидным. Первый символ должен быть цифрой или "+".`;
 
-const EMAIL_VALID_SYMBOLS = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
-const EMAIL_ERROR_TEXT = `EMAIL должен быть валидным. Необходимо указать @.`;
+const EMAIL_VALID_SYMBOLS = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+const EMAIL_ERROR_TEXT = `EMAIL должен быть валидным. В адресе отсутствует символ "@".`;
 
 const SubmitButtonText = {
   IDLE: 'ОТПРАВИТЬ ОТЗЫВ',
@@ -16,7 +16,8 @@ const SubmitButtonText = {
 };
 
 const form = document.querySelector('.form__application');
-const usernameField = document.querySelector('.username__field');
+const userNameField = document.querySelector('.username__field--name');
+const userSurnameField = document.querySelector('.username__field--surname');
 const phoneField = document.querySelector('.contacts__field--phone');
 const emailField = document.querySelector('.contacts__field--email');
 const submitButton = document.querySelector('.form__button');
@@ -34,7 +35,7 @@ const pristineContacts = new Pristine(form, {
   errorTextClass: 'contacts__group--error'
 });
 
-// reset формы resetForm
+// очистка формы
 const resetForm = () => {
   form.reset();
   pristineUsername.reset();
@@ -42,7 +43,8 @@ const resetForm = () => {
 };
 
 // проверка полей на вадидность. value передает сама pristine
-//для телефона
+
+// для телефона
 const isValidPhone = (phone) => PHONE_VALID_SYMBOLS.test(phone);
 
 const validatePhone = (value) => {
@@ -70,7 +72,8 @@ const validateUsername = (value) => {
   return isValidUsername(username);
 };
 
-pristineUsername.addValidator(usernameField, validateUsername, USERNAME_ERROR_TEXT);
+pristineUsername.addValidator(userNameField, validateUsername, USERNAME_ERROR_TEXT);
+pristineUsername.addValidator(userSurnameField, validateUsername, USERNAME_ERROR_TEXT);
 
 //блокируем кнопку на время отправки
 const blockSubmitButton = () => {
