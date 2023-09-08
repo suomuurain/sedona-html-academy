@@ -99,3 +99,8 @@ body {
     display: none;
   }
 }
+
+.pristine-form--error {
+  background-color: #d75555;
+  color: $color-basic-black;
+}

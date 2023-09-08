@@ -23,23 +23,16 @@ const emailField = document.querySelector('.contacts__field--email');
 const submitButton = document.querySelector('.form__button');
 
 //создание экземпляра валидатора формы, в Pristine передаем объект с настройками
-const pristineUsername = new Pristine(form, {
-  classTo: 'username__group',
-  errorTextParent: 'username__group',
-  errorTextClass: 'username__group--error'
-});
-
-const pristineContacts = new Pristine(form, {
-  classTo: 'contacts__group',
-  errorTextParent: 'contacts__group',
-  errorTextClass: 'contacts__group--error'
+const pristine = new Pristine(form, {
+  classTo: 'pristine-form',
+  errorTextParent: 'pristine-form',
+  errorTextClass: 'pristine-form--error'
 });
 
 // очистка формы
 const resetForm = () => {
   form.reset();
-  pristineUsername.reset();
-  pristineContacts.reset();
+  pristine.reset();
 };
 
 // проверка полей на вадидность. value передает сама pristine
@@ -52,7 +45,7 @@ const validatePhone = (value) => {
   return isValidPhone(phone);
 };
 
-pristineContacts.addValidator(phoneField, validatePhone, PHONE_ERROR_TEXT);
+pristine.addValidator(phoneField, validatePhone, PHONE_ERROR_TEXT);
 
 //для почты
 const isValidEmail = (email) => EMAIL_VALID_SYMBOLS.test(email);
@@ -62,7 +55,7 @@ const validateEmail = (value) => {
   return isValidEmail(email);
 };
 
-pristineContacts.addValidator(emailField, validateEmail, EMAIL_ERROR_TEXT);
+pristine.addValidator(emailField, validateEmail, EMAIL_ERROR_TEXT);
 
 //для юзернейма
 const isValidUsername = (username) => username.length < USERNAME_MAX_LENGTH;
@@ -72,8 +65,8 @@ const validateUsername = (value) => {
   return isValidUsername(username);
 };
 
-pristineUsername.addValidator(userNameField, validateUsername, USERNAME_ERROR_TEXT);
-pristineUsername.addValidator(userSurnameField, validateUsername, USERNAME_ERROR_TEXT);
+pristine.addValidator(userNameField, validateUsername, USERNAME_ERROR_TEXT);
+pristine.addValidator(userSurnameField, validateUsername, USERNAME_ERROR_TEXT);
 
 //блокируем кнопку на время отправки
 const blockSubmitButton = () => {
@@ -91,7 +84,7 @@ const setOnFormSubmit = (onSuccess) => {
   form.addEventListener('submit', (evt) => {
     evt.preventDefault();
 
-    const isValid = pristineUsername.validate() && pristineContacts.validate();
+    const isValid = pristine.validate();
     if (isValid) {
       blockSubmitButton();
       sendData(new FormData(evt.target))
