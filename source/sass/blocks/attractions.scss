@@ -28,6 +28,8 @@
   padding: 24px 0 31px;
   border-top: 1px solid $color-border-gray;
 
+  position: relative;
+
   @media (min-width: $tablet-width) {
     border: none;
     margin: 0;
@@ -91,10 +93,10 @@
     padding: 22px 26px 15px 26px;
     background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
-    margin-top: -80px;
+    bottom: 0;
     z-index: 20;
     width: 400px;
-    height: 80px;
+    min-height: 80px;
   }
 }
 
